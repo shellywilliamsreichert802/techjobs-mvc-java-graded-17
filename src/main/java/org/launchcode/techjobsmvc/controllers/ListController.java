@@ -28,6 +28,7 @@ public class ListController {
         columnChoices.put("positionType", "Position Type");
         columnChoices.put("coreCompetency", "Skill");
 
+//        tableChoices.put("all", JobData.findAll());
         tableChoices.put("employer", JobData.getAllEmployers());
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
@@ -45,6 +46,7 @@ public class ListController {
         model.addAttribute("locations", JobData.getAllLocations());
         model.addAttribute("positions", JobData.getAllPositionTypes());
         model.addAttribute("skills", JobData.getAllCoreCompetency());
+//        model.addAttribute("name", JobData.getAllNames());
 
         return "list";
     }
@@ -57,6 +59,11 @@ public class ListController {
             model.addAttribute("title", "All Jobs");
         } else {
             jobs = JobData.findByColumnAndValue(column, value);
+
+//            if (jobs.size() > 3) {
+//                jobs = new ArrayList<>(jobs.subList(0, 3)); // Limit to first three jobs
+//            }
+
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
         }
         model.addAttribute("jobs", jobs);

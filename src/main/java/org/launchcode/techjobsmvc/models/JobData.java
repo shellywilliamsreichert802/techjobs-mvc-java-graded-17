@@ -80,6 +80,15 @@ public class JobData {
     }
 
     public static String getFieldValue(Job job, String fieldName){
+
+//        try {
+//            Field field = Job.class.getDeclaredField(fieldName);
+//            return field.get(job);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+
         String theValue;
         if (fieldName.equals("name")){
             theValue = job.getName();
