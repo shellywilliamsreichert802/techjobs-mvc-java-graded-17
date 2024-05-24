@@ -11,6 +11,8 @@
   <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
   <form th:action="@{/search/results}" method = "post">
+<!--      <form th:action="@{/search/results}" method = "get">-->
+
     <h2>Search by:</h2>
 
     <p>
@@ -37,6 +39,7 @@
   <hr />
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
+<!--    <div th:replace="~{list-jobs :: jobTable(${jobs})}"></div>-->
 
 </div>
 
