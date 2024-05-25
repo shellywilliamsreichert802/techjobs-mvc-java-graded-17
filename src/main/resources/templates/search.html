@@ -7,10 +7,12 @@
 <div th:replace="~{fragments :: page-header}"></div>
 
 <div class="container body-content">
+<!--    <h1 th:text="${searchType != null && !searchType.isEmpty() ? 'Jobs With ' + (#strings.capitalize(searchType).equals('Core Competency') ? 'Skill' : #strings.capitalize(searchType)) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':') : 'Jobs With All:'}"></h1>-->
+<!--    <h1 th:text="${'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':')}"></h1>&lt;!&ndash;    <h1 th:text="${searchType != null && !searchType.isEmpty() ? 'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':') : 'Jobs With All:'}"></h1>&ndash;&gt;-->
 <!--    <h1 th:text="'Jobs With All: ' + ${searchTerm}"></h1>-->
 <!--    <h1 th:text="${searchTerm != null && !searchTerm.isEmpty() ? 'Jobs With All: ' + searchTerm : 'Jobs With All:'}"></h1>-->
-<!--    <h1 th:text="${searchType != null && !searchType.isEmpty() ? 'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':') : 'Jobs With All:'}"></h1>-->
-    <h1 th:text="${'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':')}"></h1>
+    <h1 th:text="${searchType != null && !searchType.isEmpty() ? 'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':') : 'Jobs With All:'}"></h1>
+<!--    <h1 th:text="${'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':')}"></h1>-->
     <!--    <h1 th:text="'Jobs With All: ' + ${searchTerm}"></h1>-->
 <!--    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>-->
 

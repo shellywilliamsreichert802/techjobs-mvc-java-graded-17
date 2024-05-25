@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * Created by LaunchCode
@@ -22,11 +23,12 @@ public class ListController {
     static HashMap<String, Object> tableChoices = new HashMap<>();
 
     public ListController () {
+        columnChoices = new LinkedHashMap<>();
         columnChoices.put("all", "All");
+        columnChoices.put("Position Type", "Position Type");
         columnChoices.put("employer", "Employer");
+        columnChoices.put("Skill", "Skill");
         columnChoices.put("location", "Location");
-        columnChoices.put("positionType", "Position Type");
-        columnChoices.put("coreCompetency", "Skill");
 
 //        tableChoices.put("all", JobData.findAll());
         tableChoices.put("employer", JobData.getAllEmployers());
