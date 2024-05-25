@@ -48,6 +48,7 @@ public class SearchController {
         model.addAttribute("searchType", searchType);  // Pass searchType to the view
         return "search";
     }
+//commit comment
 
 //    @PostMapping(value = "results")
 //    public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
