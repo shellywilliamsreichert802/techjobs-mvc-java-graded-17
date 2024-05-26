@@ -25,18 +25,27 @@
         <tr>
           <th>Employer</th>
           <td th:text="${job.employer}"></td>
+          <!--           Bonus to link but breaks tests-->
+          <!--          <td><a th:href="@{/list/jobs(column='employer', value=${job.employer})}" th:text="${job.employer}"></a></td>-->
         </tr>
         <tr>
           <th>Location</th>
           <td th:text="${job.location}"></td>
+<!--           Bonus to link but breaks tests-->
+<!--          <td><a th:href="@{/list/jobs(column='location', value=${job.location})}" th:text="${job.location}"></a></td>-->
+
         </tr>
         <tr>
           <th>Position Type</th>
           <td th:text="${job.positionType}"></td>
+          <!--           Bonus to link but breaks tests-->
+          <!--          <td><a th:href="@{/list/jobs(column='positionType', value=${job.positionType})}" th:text="${job.positionType}"></a></td>-->
         </tr>
         <tr>
           <th>Skill</th>
           <td th:text="${job.coreCompetency}"></td>
+          <!--           Bonus to link but breaks tests-->
+          <!--          <td><a th:href="@{/list/jobs(column='coreCompetency', value=${job.coreCompetency})}" th:text="${job.coreCompetency}"></a></td>-->
         </tr>
       </table>
     </div>
