@@ -7,18 +7,9 @@
 <div th:replace="~{fragments :: page-header}"></div>
 
 <div class="container body-content">
-<!--    <h1 th:text="${searchType != null && !searchType.isEmpty() ? 'Jobs With ' + (#strings.capitalize(searchType).equals('Core Competency') ? 'Skill' : #strings.capitalize(searchType)) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':') : 'Jobs With All:'}"></h1>-->
-<!--    <h1 th:text="${'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':')}"></h1>&lt;!&ndash;    <h1 th:text="${searchType != null && !searchType.isEmpty() ? 'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':') : 'Jobs With All:'}"></h1>&ndash;&gt;-->
-<!--    <h1 th:text="'Jobs With All: ' + ${searchTerm}"></h1>-->
-<!--    <h1 th:text="${searchTerm != null && !searchTerm.isEmpty() ? 'Jobs With All: ' + searchTerm : 'Jobs With All:'}"></h1>-->
     <h1 th:text="${searchType != null && !searchType.isEmpty() ? 'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':') : 'Jobs With All:'}"></h1>
-<!--    <h1 th:text="${'Jobs With ' + #strings.capitalize(searchType) + (searchTerm != null && !searchTerm.isEmpty() ? ': ' + searchTerm : ':')}"></h1>-->
-    <!--    <h1 th:text="'Jobs With All: ' + ${searchTerm}"></h1>-->
-<!--    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>-->
-<!--    commit comment-->
 
   <form th:action="@{/search/results}" method = "post">
-<!--      <form th:action="@{/search/results}" method = "get">-->
 
     <h2>Search by:</h2>
 
@@ -47,26 +38,6 @@
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
     <div th:replace="list-jobs :: jobTable(${jobs})"></div>
-<!--    <table>-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th>Name</th>-->
-<!--            <th>Employer</th>-->
-<!--            <th>Location</th>-->
-<!--            <th>Position Type</th>-->
-<!--            <th>Core Competency</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr th:each="job : ${jobs}">-->
-<!--            <td th:text="${job.name}"></td>-->
-<!--            <td th:text="${job.employer}"></td>-->
-<!--            <td th:text="${job.location}"></td>-->
-<!--            <td th:text="${job.positionType}"></td>-->
-<!--            <td th:text="${job.coreCompetency}"></td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
 
 </div>
 

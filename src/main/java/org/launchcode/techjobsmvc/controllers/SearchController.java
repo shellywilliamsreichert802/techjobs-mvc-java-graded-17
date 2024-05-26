@@ -48,26 +48,6 @@ public class SearchController {
         model.addAttribute("searchType", searchType);  // Pass searchType to the view
         return "search";
     }
-//commit comment
-
-//    @PostMapping(value = "results")
-//    public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
-//        ArrayList<Job> jobs;
-//        if (searchType.equals("all")) {
-//            if (searchTerm == null || searchTerm.equals("")) {
-//                jobs = JobData.findAll();
-//                searchTerm = "";  // Set searchTerm to an empty string when it's null or empty
-//            } else {
-//                jobs = JobData.findByValue(searchTerm);
-//            }
-//        } else {
-//            jobs = JobData.findByColumnAndValue(searchType, searchTerm);
-//        }
-//        model.addAttribute("jobs", jobs);
-//        model.addAttribute("columns", ListController.columnChoices);
-//        model.addAttribute("searchTerm", searchTerm);  // Pass searchTerm to the view
-//        return "search";
-//    }
 
 }
 
